@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --mocha-base: #8E7D74;
+  --mocha-dark: #3D3531;
+  --mocha-border: rgba(141, 124, 116, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --whispy-blue: #E0E7FF;
+}
+
+.dark {
+  --card-bg: rgba(24, 24, 27, 0.95);
+  --mocha-dark: #F3F3F3;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #F5F1ED;
+  color: #1E293B;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F5F1ED;
+}
+
+.dark body {
+  background: #0f172a;
+}
+
+@keyframes float {
+
+0% { transform: translateY(0px); }
+
+50% { transform: translateY(-8px); }
+
+100% { transform: translateY(0px); }
+
+}
+
+.float {
+animation: float 4s ease-in-out infinite;
+}
