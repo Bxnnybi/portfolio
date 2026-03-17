@@ -5,31 +5,31 @@ import { FiMoon, FiSun } from "react-icons/fi"
 
 export default function DarkModeToggle() {
 
-const [dark,setDark] = useState(false)
+    const [dark, setDark] = useState(false)
 
-useEffect(()=>{
+    useEffect(() => {
 
-const root = window.document.documentElement
+        const root = window.document.documentElement
 
-if(dark){
-root.classList.add("dark")
-}else{
-root.classList.remove("dark")
-}
+        if (dark) {
+            root.classList.add("dark")
+        } else {
+            root.classList.remove("dark")
+        }
 
-},[dark])
+    }, [dark])
 
-return(
+    return (
 
-<button
-onClick={()=>setDark(!dark)}
-className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
->
+        <button
+            onClick={() => setDark(!dark)}
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+        >
 
-{dark ? <FiSun/> : <FiMoon/>}
+            {dark ? <FiSun /> : <FiMoon />}
 
-</button>
+        </button>
 
-)
+    )
 
 }

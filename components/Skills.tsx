@@ -1,44 +1,44 @@
 import { skills } from "@/data/skills"
 
-export default function Skills(){
+export default function Skills() {
 
-return(
+    return (
 
-<section id="skills" className="py-28">
+        <section id="skills" className="py-28">
 
-<div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-6xl mx-auto px-6">
 
-<div className="text-center mb-12">
+                <div className="text-center mb-12">
 
-<h2 className="text-3xl font-bold text-mocha-dark">
-Technical Skills
-</h2>
+                    <h2 className="text-3xl font-bold text-mocha-dark">
+                        Technical Skills
+                    </h2>
 
-<p className="text-mocha-dark/70 mt-3 max-w-2xl mx-auto">
-A collection of technologies and tools I use to design, build, and deploy modern applications.
-</p>
+                    <p className="text-mocha-dark/70 mt-3 max-w-2xl mx-auto">
+                        A collection of technologies and tools I use to design, build, and deploy modern applications.
+                    </p>
 
-</div>
+                </div>
 
-{Object.entries(skills).map(([category,items])=>(
+                {Object.entries(skills).map(([category, items]) => (
 
-<div key={category} className="mb-10">
+                    <div key={category} className="mb-10">
 
-<h3 className="font-semibold mb-4 text-mocha-dark">
-{category}
-</h3>
+                        <h3 className="font-semibold mb-4 text-mocha-dark">
+                            {category}
+                        </h3>
 
-<div className="grid md:grid-cols-4 gap-4">
+                        <div className="grid md:grid-cols-4 gap-4">
 
-{items.map((skill)=>{
+                            {items.map((skill) => {
 
-const Icon=skill.icon
+                                const Icon = skill.icon
 
-return(
+                                return (
 
-<div
-key={skill.name}
-className="
+                                    <div
+                                        key={skill.name}
+                                        className="
 bg-white
 border border-slate-200
 rounded-xl
@@ -49,30 +49,30 @@ p-4
 flex items-center gap-4
 "
 
->
+                                    >
 
-<Icon className="text-mocha-base"/>
+                                        <Icon className="text-mocha-base" />
 
-<span className="text-sm text-mocha-dark">
-{skill.name}
-</span>
+                                        <span className="text-sm text-mocha-dark">
+                                            {skill.name}
+                                        </span>
 
-</div>
+                                    </div>
 
-)
+                                )
 
-})}
+                            })}
 
-</div>
+                        </div>
 
-</div>
+                    </div>
 
-))}
+                ))}
 
-</div>
+            </div>
 
-</section>
+        </section>
 
-)
+    )
 
 }

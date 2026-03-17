@@ -5,19 +5,19 @@ import Education from "@/components/Education"
 import Projects from "@/components/Projects"
 import Contact from "@/components/Contact"
 
-export default function Home(){
+export default function Home() {
 
-return(
+    return (
 
-<>
-<Hero/>
-<About/>
-<Skills/>
-<Education/>
-<Projects/>
-<Contact/>
-</>
+        <>
+            <Hero />
+            <About />
+            <Skills />
+            <Education />
+            <Projects />
+            <Contact />
+        </>
 
-)
+    )
 
 }
